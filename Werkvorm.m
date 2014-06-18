@@ -183,4 +183,16 @@
                                                                                 @"WV_MEMO" : self.WV_MEMO}, nil];
     return dictionary;
 }
+
+- (NSString *)convertDictionaryToJsonString:(NSDictionary *)dictionary{
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dictionary
+                                                       options:0
+                                                         error:&error];
+    NSString *JSONString = [[NSString alloc] initWithBytes:[jsonData bytes] length:[jsonData length] encoding:NSUTF8StringEncoding];
+    
+    NSLog(@"JSON OUTPUT: %@", JSONString);
+    
+    return JSONString;
+}
 @end
