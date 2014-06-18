@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-
-
 @interface Werkvorm : NSObject
 
 @property (nonatomic, strong) NSString *WV_TC;
@@ -89,11 +87,10 @@
 @property (nonatomic, strong) NSString *WV_MI8IA;
 @property (nonatomic, strong) NSString *WV_MEMO;
 
-
 - (NSString *)WV_TC;
 - (NSString *)WV_NR;
 - (int)WV_STER;
 
+- (Werkvorm *)newWerkvormWithEmptyStrings;
+
 @end
-
-
