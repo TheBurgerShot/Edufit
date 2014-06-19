@@ -154,6 +154,13 @@ NSMutableArray *werkvormen;
     
 }
 
+- (IBAction)jsonButton:(id)sender {
+    Werkvorm *werkvorm = [[Werkvorm alloc]init];
+    
+    [werkvorm setEmptyStrings];
+    
+    NSDictionary *dictionary = [werkvorm convertToDictionary];
+}
 
 - (void)didReceiveMemoryWarning
 {

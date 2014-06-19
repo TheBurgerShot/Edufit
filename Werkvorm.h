@@ -87,10 +87,7 @@
 @property (nonatomic, strong) NSString *WV_MI8IA;
 @property (nonatomic, strong) NSString *WV_MEMO;
 
-- (NSString *)WV_TC;
-- (NSString *)WV_NR;
-- (int)WV_STER;
-
-- (Werkvorm *)newWerkvormWithEmptyStrings;
-
+- (void)setEmptyStrings;
+- (NSString *)convertDictionaryToJsonString:(NSDictionary *)dictionary;
+- (NSDictionary *)convertToDictionary;
 @end
